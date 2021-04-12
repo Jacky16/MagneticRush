@@ -15,7 +15,13 @@ public class ChargesManager : MonoBehaviour
     //Text
     [SerializeField] TextController text;
     [TextArea]
+<<<<<<< Updated upstream
     [SerializeField] string message;
+=======
+    //[SerializeField] string message;
+    int numCharges;
+    float selector;
+>>>>>>> Stashed changes
     
     void Start()
     {
@@ -39,8 +45,12 @@ public class ChargesManager : MonoBehaviour
         }
         else
         {
+<<<<<<< Updated upstream
             if(!isEditMode)
             text.SetText(message);
+=======
+            //text.SetText(message);
+>>>>>>> Stashed changes
         }
     }
 
