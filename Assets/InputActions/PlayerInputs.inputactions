@@ -7,9 +7,9 @@
             "actions": [
                 {
                     "name": "PutCharge",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "6943a9de-656e-49bf-9c58-7b4be343bb2b",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
                 },
@@ -25,6 +25,14 @@
                     "name": "Wheel",
                     "type": "Value",
                     "id": "20e9c6d7-9e38-4f26-a87e-79aafccd526d",
+                    "expectedControlType": "Vector2",
+                    "processors": "NormalizeVector2",
+                    "interactions": ""
+                },
+                {
+                    "name": "OnMouseMovement",
+                    "type": "Value",
+                    "id": "8783c941-f7c6-457a-a4b9-8156156115b6",
                     "expectedControlType": "Vector2",
                     "processors": "NormalizeVector2",
                     "interactions": ""
@@ -61,6 +69,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Wheel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "23bb69f8-d0c7-4ec4-8947-715f38d52674",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnMouseMovement",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

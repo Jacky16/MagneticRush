@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour
 {
     Vector2 axisMouseWheel = Vector2.zero;
     [SerializeField] ChargesManager charges;
+    Vector2 mousePosition = Vector2.zero;
     public void OnWheel(InputAction.CallbackContext ctx)
     {  
         if (ctx.performed)
@@ -16,7 +17,7 @@ public class InputManager : MonoBehaviour
     }
     public void OnPutCharge(InputAction.CallbackContext ctx)
     {
-        if (ctx.started)
+        if (ctx.canceled)
         {
             
         }
@@ -26,6 +27,13 @@ public class InputManager : MonoBehaviour
         if (ctx.performed)
         {
             
+        }
+    }
+    public void OnMouseMovement(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+
         }
     }
 }
