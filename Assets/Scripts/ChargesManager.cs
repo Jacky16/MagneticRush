@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ChargesManager : MonoBehaviour
 {
     [SerializeField] GameObject positiveCharge;
     [SerializeField] GameObject negativeCharge;
     [SerializeField] int maxCharges;
+    [SerializeField] TextController text;
+    [TextArea]
+    [SerializeField] string message;
     int numCharges;
     float selector;
     
@@ -14,12 +18,13 @@ public class ChargesManager : MonoBehaviour
     void Start()
     {
         selector = 0;
+        numCharges = 5;
+        ChargeSpawn(new Vector3(0, 0, 0));
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     void ChargeSpawn(Vector3 posSpawn)
@@ -39,8 +44,7 @@ public class ChargesManager : MonoBehaviour
         }
         else
         {
-            /*Poner mensaje en un canvas de: "Ya has colocado el máximo de partículas posibles
-             Si quieres colocar más, borra alguna de las actuales" (más cortito).*/
+            text.SetText(message);
         }
     }
 
