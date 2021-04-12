@@ -5,16 +5,16 @@ using UnityEngine;
 public class Pole : MonoBehaviour
 {
     [Header("General Settings")]
-    [SerializeField] float radius;
+    [SerializeField] Vector2 boxSize;
     [SerializeField] float force;
     [SerializeField] Color positiveColor;
     [SerializeField] Color negativeColor;
-
     [SerializeField]enum POLESTATE {POSITIVE,NEGATIVE};
     [SerializeField] POLESTATE poleState;
-    bool playerInRadius;
+
     Vector2 dir = Vector2.zero;
     SpriteRenderer spriteRenderer;
+
     //Player references
     GameObject playerGameObject;
     Transform playerTransform;
@@ -31,14 +31,37 @@ public class Pole : MonoBehaviour
     {
         ChangeColor();
     }
-
-    private void Update()
-    {
-        playerInRadius = Vector2.Distance(transform.position, playerTransform.position) < radius;
-    }
     private void FixedUpdate()
     {
-        MovementPoles();
+        MovementPlayer();
+    }
+
+    private void MovementPlayer()
+    {
+        Collider2D[] colls2D = Physics2D.OverlapBoxAll(transform.position, boxSize, 0);
+        if (colls2D != null)
+        {
+            foreach (Collider2D col2d in colls2D)
+            {
+                if (col2d.CompareTag("Player"))
+                {
+                    switch (poleState)
+                    {
+                        //ROJO
+                        case POLESTATE.POSITIVE:
+                            dir = (playerTransform.position - transform.position).normalized;
+                            break;
+                        //AZUL
+                        case POLESTATE.NEGATIVE:
+                            dir = (transform.position - playerTransform.position).normalized;
+                            break;
+                        default:
+                            break;
+                    }
+                    rb2dPlayer.AddForceAtPosition(dir * force, playerTransform.position, ForceMode2D.Force);
+                }
+            }
+        }
     }
 
     private void ChangeColor()
@@ -57,32 +80,12 @@ public class Pole : MonoBehaviour
                 break;
         }
     }
-    private void MovementPoles()
-    {
-        ChangeColor();
-        if (playerInRadius)
-        {     
-            switch (poleState)
-            {
-                //ROJO
-                case POLESTATE.POSITIVE:
-                    dir = (playerTransform.position - transform.position).normalized;
-                    break;
-                //AZUL
-                case POLESTATE.NEGATIVE:
-                    dir = (transform.position - playerTransform.position).normalized;
-                    break;
-                default:
-                    break;
-            }
-            rb2dPlayer.AddForceAtPosition(dir * force, playerTransform.position, ForceMode2D.Force);
-        }
-    }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, radius);
+        
+        Gizmos.DrawWireCube(transform.position, boxSize);
     }
 
     
