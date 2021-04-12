@@ -15,6 +15,7 @@ public class ChargesManager : MonoBehaviour
     [SerializeField] TextController text;
     [TextArea]
     [SerializeField] string message;
+
     
     void Start()
     {
