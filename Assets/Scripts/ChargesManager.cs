@@ -11,35 +11,27 @@ public class ChargesManager : MonoBehaviour
     [SerializeField] TextController text;
     [TextArea]
     [SerializeField] string message;
-    int numCharges;
-    float selector;
+    [SerializeField] int numCharges;
+    [SerializeField] float selector = 1;
     
-    // Start is called before the first frame update
     void Start()
     {
-        selector = 0;
-        numCharges = 5;
-        ChargeSpawn(new Vector3(0, 0, 0));
+        maxCharges = numCharges;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChargeSpawn(Vector3 posSpawn)
     {
-    }
-
-    void ChargeSpawn(Vector3 posSpawn)
-    {
-        if(numCharges <= maxCharges)
+        if(numCharges > 0 && numCharges <= maxCharges)
         {
             if (selector == 1)
             {
                 Instantiate(positiveCharge, posSpawn, Quaternion.identity, null);
-                numCharges++;
+                numCharges--;
             }
             else if (selector == -1)
             {
                 Instantiate(negativeCharge, posSpawn, Quaternion.identity, null);
-                numCharges++;
+                numCharges--;
             }
         }
         else

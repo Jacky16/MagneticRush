@@ -8,7 +8,7 @@ public class TextController : MonoBehaviour
     TextMeshProUGUI text;
     float counter;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         text = GetComponent<TextMeshProUGUI>();
         counter = 0;
@@ -23,6 +23,7 @@ public class TextController : MonoBehaviour
             if(counter >= 3)
             {
                 text.text = "";
+                counter = 0;
             }
         }
     }

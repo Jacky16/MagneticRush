@@ -33,8 +33,8 @@
                     "name": "OnMouseMovement",
                     "type": "Value",
                     "id": "8783c941-f7c6-457a-a4b9-8156156115b6",
-                    "expectedControlType": "Vector2",
-                    "processors": "NormalizeVector2",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
                     "interactions": ""
                 }
             ],

@@ -150,11 +150,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd817fe63399a147a99eb303d011d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positiveCharge: {fileID: 1126457022}
-  negativeCharge: {fileID: 574356457}
+  positiveCharge: {fileID: 3302302323148261840, guid: c3b47538bf244554a8ff2d139bdb57c8,
+    type: 3}
+  negativeCharge: {fileID: 7151090315579561631, guid: 007582ac35ec6354dbeca06556dc3d20,
+    type: 3}
   maxCharges: 4
   text: {fileID: 137793540}
   message: You have reached the maximum amount of particles allowed.
+  numCharges: 3
+  selector: 1
 --- !u!4 &39919090
 Transform:
   m_ObjectHideFlags: 0
@@ -202,10 +206,10 @@ RectTransform:
   m_Father: {fileID: 1115748577}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 287}
-  m_SizeDelta: {x: 1037.0631, y: 97.66028}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 81.2}
+  m_SizeDelta: {x: 1037.0631, y: 131.26418}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137793538
 MonoBehaviour:
@@ -226,10 +230,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: You have reached the maximum amount of particles allowed.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d11b0157cd4ac0040aef784e699bdc32, type: 2}
-  m_sharedMaterial: {fileID: 3322973463028074450, guid: d11b0157cd4ac0040aef784e699bdc32,
+  m_fontAsset: {fileID: 11400000, guid: 6cba3e683871c2147a719abbce5ae20b, type: 2}
+  m_sharedMaterial: {fileID: -2142860566150401939, guid: 6cba3e683871c2147a719abbce5ae20b,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -262,7 +266,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -460,12 +464,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &574356457 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7151090315579561631, guid: 007582ac35ec6354dbeca06556dc3d20,
-    type: 3}
-  m_PrefabInstance: {fileID: 7151090316150369654}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &923070713
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +509,18 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 923070715}
+        m_MethodName: OnPutCharge
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6943a9de-656e-49bf-9c58-7b4be343bb2b
     m_ActionName: Movement/PutCharge[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -534,7 +543,18 @@ MonoBehaviour:
     m_ActionId: 20e9c6d7-9e38-4f26-a87e-79aafccd526d
     m_ActionName: Movement/Wheel[/Mouse/scroll]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 923070715}
+        m_MethodName: OnMouseMovement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8783c941-f7c6-457a-a4b9-8156156115b6
     m_ActionName: Movement/OnMouseMovement[/Mouse/position]
   m_NeverAutoSwitchControlSchemes: 0
@@ -555,6 +575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charges: {fileID: 39919089}
+  mousePosition: {x: 0, y: 0}
 --- !u!4 &923070716
 Transform:
   m_ObjectHideFlags: 0
@@ -737,10 +758,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -788,12 +809,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1126457022 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3302302323148261840, guid: c3b47538bf244554a8ff2d139bdb57c8,
-    type: 3}
-  m_PrefabInstance: {fileID: 3302302322123036526}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1292197499
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,16 +836,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1292197499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_SubmitAction: {fileID: 2064916234097673511, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_CancelAction: {fileID: -1967631576421560919, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_LeftClickAction: {fileID: 8056856818456041789, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MiddleClickAction: {fileID: 3279352641294131588, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_RightClickAction: {fileID: 3837173908680883260, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &1292197501
 MonoBehaviour:
   m_ObjectHideFlags: 0
