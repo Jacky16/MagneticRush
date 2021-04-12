@@ -6,7 +6,6 @@ using TMPro;
 public class ChargesManager : MonoBehaviour
 {
     [SerializeField] GameObject positiveCharge;
-    [SerializeField] GameObject negativeCharge;
     [SerializeField] int maxCharges;
     [SerializeField] int numCharges;
     [SerializeField] float selector = 1;
@@ -26,16 +25,8 @@ public class ChargesManager : MonoBehaviour
     {
         if(numCharges > 0 && numCharges <= maxCharges && !isEditMode)
         {
-            if (selector == 1)
-            {
-                Instantiate(positiveCharge, posSpawn, Quaternion.identity, null);
-                numCharges--;
-            }
-            else if (selector == -1)
-            {
-                Instantiate(negativeCharge, posSpawn, Quaternion.identity, null);
-                numCharges--;
-            }
+            Instantiate(positiveCharge, posSpawn, Quaternion.identity, null);
+            numCharges--;
         }
         else
         {
@@ -63,9 +54,12 @@ public class ChargesManager : MonoBehaviour
     {
         isEditMode = !isEditMode;
     }
-
     public void SetSelector(float _selector)
     {
         selector = _selector;
+    }
+    public float GetSelector()
+    {
+        return selector;
     }
 }
