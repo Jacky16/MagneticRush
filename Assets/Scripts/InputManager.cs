@@ -33,7 +33,7 @@ public class InputManager : MonoBehaviour
     {
         if (ctx.performed)
         {
-
+            mousePosition = ctx.ReadValue<Vector2>();      
         }
     }
 }
