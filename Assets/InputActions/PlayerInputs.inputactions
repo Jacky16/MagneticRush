@@ -36,6 +36,14 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "EditCharge",
+                    "type": "Button",
+                    "id": "c8c664e9-e33b-4f79-bc4a-d13f485d077b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -80,6 +88,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "OnMouseMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ef1bae34-a9b2-4eb2-a5d7-482535093902",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EditCharge",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -8,11 +8,14 @@ public class ChargesManager : MonoBehaviour
     [SerializeField] GameObject positiveCharge;
     [SerializeField] GameObject negativeCharge;
     [SerializeField] int maxCharges;
+    [SerializeField] int numCharges;
+    [SerializeField] float selector = 1;
+    bool isEditMode;
+
+    //Text
     [SerializeField] TextController text;
     [TextArea]
     [SerializeField] string message;
-    [SerializeField] int numCharges;
-    [SerializeField] float selector = 1;
     
     void Start()
     {
@@ -21,7 +24,7 @@ public class ChargesManager : MonoBehaviour
 
     public void ChargeSpawn(Vector3 posSpawn)
     {
-        if(numCharges > 0 && numCharges <= maxCharges)
+        if(numCharges > 0 && numCharges <= maxCharges && !isEditMode)
         {
             if (selector == 1)
             {
@@ -36,8 +39,29 @@ public class ChargesManager : MonoBehaviour
         }
         else
         {
+            if(!isEditMode)
             text.SetText(message);
         }
+    }
+
+    public void Edit(Vector2 raySpawn)
+    {
+        if (isEditMode)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(raySpawn, Vector3.forward);
+            if(hit.collider != null)
+            {
+                if (hit.collider.CompareTag("Particle"))
+                {
+                    numCharges++;
+                    Destroy(hit.collider.gameObject);
+                }
+            }
+        }
+    }
+    public void EditMode()
+    {
+        isEditMode = !isEditMode;
     }
 
     public void SetSelector(float _selector)
