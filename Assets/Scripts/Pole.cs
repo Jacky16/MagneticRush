@@ -12,6 +12,9 @@ public class Pole : MonoBehaviour
     [SerializeField]enum POLESTATE {POSITIVE,NEGATIVE};
     [SerializeField] POLESTATE poleState;
 
+    [SerializeField]enum DIRECTION { UP,DOWN,LEFT,RIGHT,ALL_DIRECTIONS};
+    [SerializeField] DIRECTION directions;
+
     Vector2 dir = Vector2.zero;
     SpriteRenderer spriteRenderer;
 
@@ -49,14 +52,29 @@ public class Pole : MonoBehaviour
                     {
                         //ROJO
                         case POLESTATE.POSITIVE:
-                            dir = (playerTransform.position - transform.position).normalized;
+                            switch (directions)
+                            {
+                                case DIRECTION.UP:
+                                    dir = Vector2.up * force;
+                                    break;
+
+                                case DIRECTION.DOWN:
+                                    dir = Vector2.down * force;
+                                    break;
+
+                                case DIRECTION.LEFT:
+                                    dir = Vector2.left * force;
+                                    break;
+                                case DIRECTION.RIGHT:
+                                    dir = Vector2.right * force;
+                                    break;
+
+                                case DIRECTION.ALL_DIRECTIONS:
+                                    dir = (playerTransform.position - transform.position).normalized;
+                                    break;
+                            }
                             break;
-                        //AZUL
-                        case POLESTATE.NEGATIVE:
-                            dir = (transform.position - playerTransform.position).normalized;
-                            break;
-                        default:
-                            break;
+                       
                     }
                     rb2dPlayer.AddForceAtPosition(dir * force, playerTransform.position, ForceMode2D.Force);
                 }
