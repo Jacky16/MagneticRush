@@ -6,7 +6,7 @@ using TMPro;
 public class ChargesManager : MonoBehaviour
 {
     [SerializeField] GameObject positiveCharge;
-    [SerializeField] int maxCharges;
+    int maxCharges;
     [SerializeField] int numCharges;
     [SerializeField] float selector = 1;
     bool isEditMode;

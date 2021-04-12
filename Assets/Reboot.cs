@@ -6,18 +6,8 @@ using UnityEngine.SceneManagement;
 public class Reboot : MonoBehaviour
 {
     [SerializeField] int nScene;
-    // Start is called before the first frame update
-    void Start()
+    public void RebootScene()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(nScene);
-        }
+        SceneManager.LoadScene(nScene);
     }
 }
