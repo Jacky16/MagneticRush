@@ -32,8 +32,6 @@ public class Pole : MonoBehaviour
         ChangeColor();
     }
 
-
-
     private void Update()
     {
         playerInRadius = Vector2.Distance(transform.position, playerTransform.position) < radius;
@@ -77,9 +75,8 @@ public class Pole : MonoBehaviour
                 default:
                     break;
             }
+            rb2dPlayer.AddForceAtPosition(dir * force, playerTransform.position, ForceMode2D.Force);
         }
-
-        rb2dPlayer.AddForceAtPosition(dir * force, playerTransform.position, ForceMode2D.Force);
     }
 
     private void OnDrawGizmos()
