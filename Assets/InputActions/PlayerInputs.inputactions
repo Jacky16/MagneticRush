@@ -1,0 +1,71 @@
+{
+    "name": "PlayerInputs",
+    "maps": [
+        {
+            "name": "Movement",
+            "id": "ea241fdc-c146-43d4-8c1d-98aea12bd52a",
+            "actions": [
+                {
+                    "name": "PutCharge",
+                    "type": "Button",
+                    "id": "6943a9de-656e-49bf-9c58-7b4be343bb2b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "DoForce",
+                    "type": "Button",
+                    "id": "6575d02c-49c5-4d07-babd-27bbf65eedb3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Wheel",
+                    "type": "Value",
+                    "id": "20e9c6d7-9e38-4f26-a87e-79aafccd526d",
+                    "expectedControlType": "Vector2",
+                    "processors": "NormalizeVector2",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f4f2d589-3ea3-41d4-888e-f4b28e57153c",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PutCharge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8a809a06-57a4-4ec6-b217-ad3bde88376b",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DoForce",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "68b3ca0f-1740-4ac6-89f0-6e7891a286e7",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Wheel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
