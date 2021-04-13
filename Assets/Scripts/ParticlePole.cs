@@ -41,13 +41,7 @@ public class ParticlePole : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("Player"))
-        {
-            Reboot.singletone.RebootScene();
-        }
-    }
+   
     private void OnDestroy()
     {
         Instantiate(VFX_Destroy, transform.position, Quaternion.identity, null);

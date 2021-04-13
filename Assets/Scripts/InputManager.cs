@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     Vector2 axisMouseWheel = Vector2.zero;
     Vector2 mousePosition = Vector2.zero;
     bool isDoingForce;
+    float oldSelector;
     public static InputManager singletone;
     private void Awake()
     {
@@ -26,7 +27,15 @@ public class InputManager : MonoBehaviour
         if (ctx.performed)
         {
             axisMouseWheel = ctx.ReadValue<Vector2>();
+            if(oldSelector == axisMouseWheel.y)
+            {
+                axisMouseWheel.y *= -1;
+            }
             charges.SetSelector(axisMouseWheel.y);
+        }
+        if (ctx.canceled)
+        {
+            oldSelector = axisMouseWheel.y;
         }
     }
     public void OnPutCharge(InputAction.CallbackContext ctx)
