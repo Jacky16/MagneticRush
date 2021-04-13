@@ -5,9 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Reboot : MonoBehaviour
 {
-    [SerializeField] int nScene;
+    public static Reboot singletone;
+    private void Awake()
+    {
+        if(singletone == null)
+        singletone = this;
+    }
     public void RebootScene()
     {
-        SceneManager.LoadScene(nScene);
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.buildIndex);
     }
 }

@@ -52,8 +52,11 @@ public class InputManager : MonoBehaviour
     }
     public void OnMouseMovement(InputAction.CallbackContext ctx)
     {
-        mousePosition = ctx.ReadValue<Vector2>();
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        if (ctx.performed)
+        {
+            mousePosition = ctx.ReadValue<Vector2>();
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        }
     }
     public Vector2 GetMousePos()
     {

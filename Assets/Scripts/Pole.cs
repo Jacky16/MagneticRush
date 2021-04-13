@@ -136,6 +136,13 @@ public class Pole : MonoBehaviour
                 break;
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Reboot.singletone.RebootScene();
+        }
+    }
 
     private void OnDrawGizmos()
     {

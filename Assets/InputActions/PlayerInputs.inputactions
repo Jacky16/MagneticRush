@@ -7,9 +7,9 @@
             "actions": [
                 {
                     "name": "PutCharge",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "6943a9de-656e-49bf-9c58-7b4be343bb2b",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
