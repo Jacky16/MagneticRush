@@ -14546,6 +14546,8 @@ MonoBehaviour:
   radius: 3.26
   force: 5
   poleState: 1
+  VFX_Destroy: {fileID: 5711230232620137612, guid: 9de815a36a9b94c42bf3c5708eb5f581,
+    type: 3}
 --- !u!82 &-2146057928291706635
 AudioSource:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ public class ChargesManager : MonoBehaviour
     [Header("Prefabs")]
     [SerializeField] GameObject positiveCharge;
     [SerializeField] GameObject negativeCharge;
+    [SerializeField] float timeToDestroy;
+    float count = 0;
     [Header("General Settings")]
     [SerializeField] int numCharges;
     [SerializeField] float mouseForce;
@@ -75,14 +77,17 @@ public class ChargesManager : MonoBehaviour
         {         
             SimpleCameraShakeInCinemachine.singletone.DoCameraShake();
             numCharges--;
+            GameObject go = null;
             if (selector == 1)
             {
-                Instantiate(positiveCharge, posSpawn, Quaternion.identity, null);              
+                go = Instantiate(positiveCharge, posSpawn, Quaternion.identity, null);              
             }
             else if (selector == -1)
             {
-                Instantiate(negativeCharge, posSpawn, Quaternion.identity, null);             
+                go = Instantiate(negativeCharge, posSpawn, Quaternion.identity, null);             
             }
+            Destroy(go, timeToDestroy);
+            Invoke("AddCharge", timeToDestroy);
         }
         else
         {
@@ -90,6 +95,10 @@ public class ChargesManager : MonoBehaviour
             text.SetText(message);
         }
        
+    }
+    void AddCharge()
+    {
+        numCharges++;
     }
     public void SetSelector(float _selector)
     {

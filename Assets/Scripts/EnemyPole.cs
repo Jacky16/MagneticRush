@@ -24,7 +24,7 @@ public class EnemyPole : MonoBehaviour
     private void FixedUpdate()
     {
         if(!playerInRadius)
-        rb2d.velocity = Vector2.left * speed;
+        rb2d.AddForce(Vector2.left * speed);
         if (playerInRadius)
         {
             ////Mover al player
@@ -42,8 +42,11 @@ public class EnemyPole : MonoBehaviour
         {
             Reboot.singletone.RebootScene();
         }
-        Instantiate(prefabParticleDestroy, transform.position, Quaternion.identity, null);
-        Destroy(gameObject);
+        if (!collision.collider.CompareTag("Particle"))
+        {
+            Instantiate(prefabParticleDestroy, transform.position, Quaternion.identity, null);
+            Destroy(gameObject);
+        }
     }
     private void OnDrawGizmos()
     {

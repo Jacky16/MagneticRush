@@ -10,6 +10,8 @@ public class ParticlePole : MonoBehaviour
  
     [SerializeField] enum POLESTATE { POSITIVE, NEGATIVE };
     [SerializeField] POLESTATE poleState;
+
+    [SerializeField] GameObject VFX_Destroy;
     Vector2 dir = Vector2.zero;
 
     private void FixedUpdate()
@@ -45,6 +47,10 @@ public class ParticlePole : MonoBehaviour
         {
             Reboot.singletone.RebootScene();
         }
+    }
+    private void OnDestroy()
+    {
+        Instantiate(VFX_Destroy, transform.position, Quaternion.identity, null);
     }
     private void OnDrawGizmos()
     {

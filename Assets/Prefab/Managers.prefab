@@ -5106,6 +5106,7 @@ MonoBehaviour:
     type: 3}
   negativeCharge: {fileID: 4983366881797993155, guid: 38649fda587572e44b3be05e131c8062,
     type: 3}
+  timeToDestroy: 1
   numCharges: 4
   mouseForce: 10
   mouseRadius: 2.47
