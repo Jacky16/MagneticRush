@@ -47,7 +47,8 @@ public class ChargesManager : MonoBehaviour
     {
         maxCharges = numCharges;
         Cursor.visible = false;
-        
+        selector = 1;
+        ChangeMouseColor();
     }
     private void Update()
     {
@@ -123,7 +124,8 @@ public class ChargesManager : MonoBehaviour
             if(selector == 1)
             {
                 spr.color = positiveColor;
-            }else if(selector == -1)
+            }
+            if(selector == -1)
             {
                 spr.color = negativeColor;
             }
@@ -152,12 +154,13 @@ public class ChargesManager : MonoBehaviour
             audioSwitch.Play();
             switchParticle.Play();
         }
-        else if(selector == -1)
+        if(selector == -1)
         {
             switchParticle.startColor = positiveColor;
             audioSwitch.Play();
             switchParticle.Play();
         }
+       
        
     }
 }
