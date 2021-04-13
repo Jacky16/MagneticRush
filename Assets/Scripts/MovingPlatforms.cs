@@ -6,6 +6,8 @@ public class MovingPlatforms : MonoBehaviour
 {
     [SerializeField] float velocity;
     private Rigidbody2D prb2d;
+    enum DIRECTION { UP, DOWN};
+    [SerializeField] private DIRECTION dir;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,17 @@ public class MovingPlatforms : MonoBehaviour
 
     private void FixedUpdate()
     {
-        prb2d.velocity = transform.up * velocity;
+        switch (dir)
+        {
+            case DIRECTION.UP:
+                prb2d.velocity = -transform.up * velocity;
+                break;
+            case DIRECTION.DOWN:
+                prb2d.velocity = transform.up * velocity;
+                break;
+            default:
+                break;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

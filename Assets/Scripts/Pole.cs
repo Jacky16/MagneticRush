@@ -17,7 +17,7 @@ public class Pole : MonoBehaviour
     [SerializeField]enum DIRECTION { UP,DOWN,LEFT,RIGHT,ALL_DIRECTIONS};
     [SerializeField] DIRECTION directions;
     [Header("Audios Settings")]
-    [SerializeField] AudioSource audioSource;
+    private AudioSource audioSource;
     [SerializeField] AudioClip audioNegative;
     [SerializeField] AudioClip audioPositive;
     float timeToStopAudio = 2;
@@ -33,6 +33,7 @@ public class Pole : MonoBehaviour
     Rigidbody2D rb2dPlayer;
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         playerGameObject = GameObject.FindGameObjectWithTag("Player");
         playerTransform = playerGameObject.transform;
         rb2dPlayer = playerGameObject.GetComponent<Rigidbody2D>();
