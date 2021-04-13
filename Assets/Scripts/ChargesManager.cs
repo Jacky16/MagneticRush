@@ -27,9 +27,13 @@ public class ChargesManager : MonoBehaviour
     [SerializeField] Transform mouseTransform;
     [SerializeField] SpriteRenderer spr;
     [SerializeField] ParticleSystem [] particlesForce;
+    [SerializeField] ParticleSystem switchParticle;
     [SerializeField] Color positiveColor;
     [SerializeField] Color negativeColor;
     [SerializeField] Color neutralColor;
+    [Header("Mouse Audio Settings")]
+    [SerializeField] AudioSource audioSwitch;
+    [SerializeField] AudioSource audioForce;
 
     Rigidbody2D rb2dPlayer;
     Vector2 mousePos;
@@ -41,6 +45,7 @@ public class ChargesManager : MonoBehaviour
     {
         maxCharges = numCharges;
         Cursor.visible = false;
+        
     }
     private void Update()
     {
@@ -56,12 +61,17 @@ public class ChargesManager : MonoBehaviour
         if (!isDoingForce)
         {
             PlayParticlesForce();
+            audioForce.Stop();
+        }
+        else
+        {
+            if(!audioForce.isPlaying)
+            audioForce.Play();
         }     
-        print(isDoingForce);
     }
     public void ChargeSpawn(Vector3 posSpawn)
     {
-        if(numCharges > 0 && numCharges <= maxCharges && !isEditMode)
+        if(numCharges > 0 && numCharges <= maxCharges && !isDoingForce)
         {         
             SimpleCameraShakeInCinemachine.singletone.DoCameraShake();
             numCharges--;
@@ -123,14 +133,22 @@ public class ChargesManager : MonoBehaviour
         {
             particlesForce[i].Play();
         }
-        Debug.Log("AHHH");
     }
-    void StopParticlesForce()
+    public void OnSwitch()
     {
 
-        foreach (ParticleSystem ps in particlesForce)
+        if (selector == 1)
         {
-            ps.Stop();
+            switchParticle.startColor = negativeColor;
+            audioSwitch.Play();
+            switchParticle.Play();
         }
+        else if(selector == -1)
+        {
+            switchParticle.startColor = positiveColor;
+            audioSwitch.Play();
+            switchParticle.Play();
+        }
+       
     }
 }

@@ -18,7 +18,11 @@ public class InputManager : MonoBehaviour
         }
     }
     public void OnWheel(InputAction.CallbackContext ctx)
-    {  
+    {
+        if (ctx.started)
+        {
+            charges.OnSwitch();
+        }
         if (ctx.performed)
         {
             axisMouseWheel = ctx.ReadValue<Vector2>();
