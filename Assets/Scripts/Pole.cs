@@ -15,6 +15,9 @@ public class Pole : MonoBehaviour
     [SerializeField]enum DIRECTION { UP,DOWN,LEFT,RIGHT,ALL_DIRECTIONS};
     [SerializeField] DIRECTION directions;
 
+    [SerializeField] AudioSource soundMagnetic;
+    bool hasPlayed;
+
     Vector2 dir = Vector2.zero;
     SpriteRenderer spriteRenderer;
 
@@ -48,6 +51,7 @@ public class Pole : MonoBehaviour
             {
                 if (col2d.CompareTag("Player"))
                 {
+                    hasPlayed = false;
                     switch (poleState)
                     {
                         //ROJO
@@ -81,6 +85,11 @@ public class Pole : MonoBehaviour
                             break;
                     }
                     rb2dPlayer.AddForceAtPosition(dir * force, playerTransform.position, ForceMode2D.Force);
+                    if (!hasPlayed)
+                    {
+                        soundMagnetic.Play();
+                        hasPlayed = true;
+                    }
                 }
             }
         }

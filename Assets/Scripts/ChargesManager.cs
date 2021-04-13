@@ -27,6 +27,7 @@ public class ChargesManager : MonoBehaviour
         if(numCharges > 0 && numCharges <= maxCharges && !isEditMode)
         {
             Instantiate(positiveCharge, posSpawn, Quaternion.identity, null);
+            SimpleCameraShakeInCinemachine.singletone.DoCameraShake();
             numCharges--;
         }
         else
