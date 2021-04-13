@@ -31,7 +31,7 @@ public class InputManager : MonoBehaviour
         if (ctx.started)
         { 
             charges.ChargeSpawn(mousePosition);
-            charges.Edit(mousePosition);
+            //charges.Edit(mousePosition);
         }
     }
     public void OnEditCharge(InputAction.CallbackContext ctx)

@@ -6,9 +6,10 @@ using TMPro;
 public class ChargesManager : MonoBehaviour
 {
     [SerializeField] GameObject positiveCharge;
+    [SerializeField] GameObject negativeCharge;
     int maxCharges;
     [SerializeField] int numCharges;
-    [SerializeField] float selector = 1;
+    float selector = 1;
     bool isEditMode;
 
     //Text
@@ -16,27 +17,46 @@ public class ChargesManager : MonoBehaviour
     [TextArea]
     [SerializeField] string message;
 
-    
+    [Header("Mouse Visual Settings")]
+    [SerializeField] Transform mouseTransform;
+    [SerializeField] ParticleSystem ps;
+    [SerializeField] SpriteRenderer spr;
+    [SerializeField] Color positiveColor;
+    [SerializeField] Color negativeColor;
+
+
     void Start()
     {
         maxCharges = numCharges;
+        Cursor.visible = false;
     }
-
+    private void Update()
+    {
+        mouseTransform.position = InputManager.singletone.GetMousePos();
+        ChangeMouseColor();
+    }
     public void ChargeSpawn(Vector3 posSpawn)
     {
         if(numCharges > 0 && numCharges <= maxCharges && !isEditMode)
-        {
-            Instantiate(positiveCharge, posSpawn, Quaternion.identity, null);
+        {         
             SimpleCameraShakeInCinemachine.singletone.DoCameraShake();
             numCharges--;
+            if (selector == 1)
+            {
+                Instantiate(positiveCharge, posSpawn, Quaternion.identity, null);              
+            }
+            else if (selector == -1)
+            {
+                Instantiate(negativeCharge, posSpawn, Quaternion.identity, null);             
+            }
         }
         else
         {
             if(!isEditMode)
             text.SetText(message);
         }
+       
     }
-
     public void Edit(Vector2 raySpawn)
     {
         if (isEditMode)
@@ -60,6 +80,20 @@ public class ChargesManager : MonoBehaviour
     {
         selector = _selector;
     }
+
+    public void ChangeMouseColor()
+    {
+        if(selector == 1)
+        {
+            ps.startColor = positiveColor;
+            spr.color = positiveColor;
+        }else if(selector == -1)
+        {
+            ps.startColor = negativeColor;
+            spr.color = negativeColor;
+        }
+    }
+
     public float GetSelector()
     {
         return selector;
