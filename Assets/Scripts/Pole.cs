@@ -7,9 +7,11 @@ public class Pole : MonoBehaviour
     [Header("General Settings")]
     [SerializeField] Vector2 boxSize;
     [SerializeField] float force;
+
+    [SerializeField] Color noneColor;
     [SerializeField] Color positiveColor;
     [SerializeField] Color negativeColor;
-    [SerializeField]enum POLESTATE {POSITIVE,NEGATIVE};
+    [SerializeField]enum POLESTATE {NONE, POSITIVE, NEGATIVE};
     [SerializeField] POLESTATE poleState;
 
     [SerializeField]enum DIRECTION { UP,DOWN,LEFT,RIGHT,ALL_DIRECTIONS};
@@ -118,6 +120,10 @@ public class Pole : MonoBehaviour
     {
         switch (poleState)
         {
+            case POLESTATE.NONE:
+                spriteRenderer.color = noneColor;
+                break;
+
             case POLESTATE.POSITIVE:
                 spriteRenderer.color = positiveColor;
                 break;
