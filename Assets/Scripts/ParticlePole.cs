@@ -25,11 +25,11 @@ public class ParticlePole : MonoBehaviour
                     {
                         //ROJO
                         case POLESTATE.POSITIVE:
-                            dir = (col.transform.position - transform.position).normalized;
+                            dir = (transform.position - col.transform.position).normalized;
                             break;
                         //AZUL
                         case POLESTATE.NEGATIVE:
-                            dir = (transform.position - col.transform.position).normalized;
+                            dir = (col.transform.position - transform.position).normalized;
                             break;         
                     }
                     col.GetComponent<Rigidbody2D>().AddForceAtPosition(dir * force, col.transform.position, ForceMode2D.Force);
