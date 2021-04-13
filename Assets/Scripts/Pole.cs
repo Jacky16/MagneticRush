@@ -74,7 +74,11 @@ public class Pole : MonoBehaviour
                                     break;
                             }
                             break;
-                       
+
+                        case POLESTATE.NEGATIVE:
+
+                            dir = (transform.position - playerTransform.position).normalized;
+                            break;
                     }
                     rb2dPlayer.AddForceAtPosition(dir * force, playerTransform.position, ForceMode2D.Force);
                 }
