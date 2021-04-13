@@ -5,26 +5,38 @@ using TMPro;
 
 public class ChargesManager : MonoBehaviour
 {
+    [Header("Prefabs")]
     [SerializeField] GameObject positiveCharge;
     [SerializeField] GameObject negativeCharge;
-    int maxCharges;
+    [Header("General Settings")]
     [SerializeField] int numCharges;
+    [SerializeField] float mouseForce;
+    [SerializeField] float mouseRadius;
+    int maxCharges;
     float selector = 1;
     bool isEditMode;
-
-    //Text
+    bool isDoingForce;
+    bool playerInRadius;
+    Vector2 dir = Vector2.zero;
+    [Header("Text")]
     [SerializeField] TextController text;
     [TextArea]
     [SerializeField] string message;
 
     [Header("Mouse Visual Settings")]
     [SerializeField] Transform mouseTransform;
-    [SerializeField] ParticleSystem ps;
     [SerializeField] SpriteRenderer spr;
+    [SerializeField] ParticleSystem [] particlesForce;
     [SerializeField] Color positiveColor;
     [SerializeField] Color negativeColor;
+    [SerializeField] Color neutralColor;
 
-
+    Rigidbody2D rb2dPlayer;
+    Vector2 mousePos;
+    private void Awake()
+    {
+        rb2dPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+    }
     void Start()
     {
         maxCharges = numCharges;
@@ -32,8 +44,20 @@ public class ChargesManager : MonoBehaviour
     }
     private void Update()
     {
-        mouseTransform.position = InputManager.singletone.GetMousePos();
+        mousePos = InputManager.singletone.GetMousePos();
+        isDoingForce = InputManager.singletone.GetIsDoingForce();
+        playerInRadius = Vector2.Distance(mousePos, rb2dPlayer.position) < mouseRadius;
+        mouseTransform.position = mousePos;
+
         ChangeMouseColor();
+        DoForce();
+        RotationWeapon();
+
+        if (!isDoingForce)
+        {
+            PlayParticlesForce();
+        }     
+        print(isDoingForce);
     }
     public void ChargeSpawn(Vector3 posSpawn)
     {
@@ -57,45 +81,56 @@ public class ChargesManager : MonoBehaviour
         }
        
     }
-    public void Edit(Vector2 raySpawn)
-    {
-        if (isEditMode)
-        {
-            RaycastHit2D hit = Physics2D.Raycast(raySpawn, Vector3.forward);
-            if(hit.collider != null)
-            {
-                if (hit.collider.CompareTag("Particle"))
-                {
-                    numCharges++;
-                    Destroy(hit.collider.gameObject);
-                }
-            }
-        }
-    }
-    public void EditMode()
-    {
-        isEditMode = !isEditMode;
-    }
     public void SetSelector(float _selector)
     {
         selector = _selector;
     }
-
+    public void DoForce()
+    {
+        if (isDoingForce && playerInRadius)
+        {
+            dir = (rb2dPlayer.position - mousePos).normalized;
+            rb2dPlayer.AddForceAtPosition(dir * mouseForce, rb2dPlayer.position, ForceMode2D.Force);
+        }    
+    }
     public void ChangeMouseColor()
     {
-        if(selector == 1)
+        if (isDoingForce)
         {
-            ps.startColor = positiveColor;
-            spr.color = positiveColor;
-        }else if(selector == -1)
+            spr.color = neutralColor;
+        }
+        else
         {
-            ps.startColor = negativeColor;
-            spr.color = negativeColor;
+            if(selector == 1)
+            {
+                spr.color = positiveColor;
+            }else if(selector == -1)
+            {
+                spr.color = negativeColor;
+            }
         }
     }
-
-    public float GetSelector()
+    public void RotationWeapon()
     {
-        return selector;
+        Vector2 dirRot = mousePos - rb2dPlayer.position;
+        float rotationZ = Mathf.Atan2(dirRot.y, dirRot.x) * Mathf.Rad2Deg;
+        mouseTransform.localRotation = Quaternion.Euler(0, 0, rotationZ + 90);
+    }
+
+    void PlayParticlesForce()
+    {
+        for(int i = 0; i< particlesForce.Length; i++)
+        {
+            particlesForce[i].Play();
+        }
+        Debug.Log("AHHH");
+    }
+    void StopParticlesForce()
+    {
+
+        foreach (ParticleSystem ps in particlesForce)
+        {
+            ps.Stop();
+        }
     }
 }

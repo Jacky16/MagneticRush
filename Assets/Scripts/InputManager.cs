@@ -6,9 +6,9 @@ public class InputManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] ChargesManager charges;
-    [SerializeField] MouseForceManager mouseForce;
     Vector2 axisMouseWheel = Vector2.zero;
     Vector2 mousePosition = Vector2.zero;
+    bool isDoingForce;
     public static InputManager singletone;
     private void Awake()
     {
@@ -23,7 +23,6 @@ public class InputManager : MonoBehaviour
         {
             axisMouseWheel = ctx.ReadValue<Vector2>();
             charges.SetSelector(axisMouseWheel.y);
-            mouseForce.SetSelector(axisMouseWheel.y);
         }
     }
     public void OnPutCharge(InputAction.CallbackContext ctx)
@@ -43,11 +42,12 @@ public class InputManager : MonoBehaviour
     {
         if (ctx.performed)
         {
-            mouseForce.SetMousePressed(true);
+            isDoingForce = true;
+            
         }
         if (ctx.canceled)
         {
-            mouseForce.SetMousePressed(false);
+            isDoingForce = false;
         }
     }
     public void OnMouseMovement(InputAction.CallbackContext ctx)
@@ -61,5 +61,9 @@ public class InputManager : MonoBehaviour
     public Vector2 GetMousePos()
     {
         return mousePosition;
+    }
+    public bool GetIsDoingForce()
+    {
+        return isDoingForce;
     }
 }
