@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/TutoPolos.unity
-    guid: d7ead164b7c40564c947270078b11c0e
+    path: Assets/Scenes/MainMenu.unity
+    guid: aef640251f305af42a99dc599cacd36e
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 74c8d1f2cdd02ca4589fe1e32f116e26
+  - enabled: 1
+    path: Assets/Scenes/Nivel_1.unity
+    guid: f2302941e779a4747beb525d20170e94
+  - enabled: 1
+    path: Assets/Scenes/Nivel_2.unity
+    guid: 67ef59651f7499242ab66921576153a8
   m_configObjects: {}
