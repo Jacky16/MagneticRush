@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class PlayerDead : MonoBehaviour
 {
-    private void OnWillRenderObject()
+    [SerializeField] float distanceToCamera = 14;
+    private void Update()
     {
-        //Reboot.singletone.RebootScene();
+        float distance = Vector2.Distance(transform.position, Camera.main.transform.position);
+        if(distance >= distanceToCamera)
+        {
+            Reboot.singletone.RebootScene();
+        }
     }
 }

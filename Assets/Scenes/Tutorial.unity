@@ -1771,24 +1771,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1508572349}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1485948935 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8907350952723576293, guid: 145406f1cec32e240a6dfa5d6d127bc6,
-    type: 3}
-  m_PrefabInstance: {fileID: 8907350953653616098}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1485948941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485948935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed485d571f93b6e478e405b112be0368, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1508572349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2693,7 +2675,6 @@ GameObject:
   - component: {fileID: 2024507792}
   - component: {fileID: 2024507794}
   - component: {fileID: 2024507793}
-  - component: {fileID: 2024507797}
   - component: {fileID: 2024507796}
   m_Layer: 0
   m_Name: MainCamera
@@ -2762,7 +2743,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 23
   stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
+  finalBlitToCameraTarget: 1
   antialiasingMode: 0
   temporalAntialiasing:
     jitterSpread: 0.75
@@ -2861,19 +2842,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2024507797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024507791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4073a203b63f4b44a9a867df5d37f18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  limits: {x: 10, y: 0}
 --- !u!1 &2120373972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,7 +3080,7 @@ PrefabInstance:
     - target: {fileID: 8907350952723576297, guid: 145406f1cec32e240a6dfa5d6d127bc6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.04
+      value: -5.61
       objectReference: {fileID: 0}
     - target: {fileID: 8907350952723576297, guid: 145406f1cec32e240a6dfa5d6d127bc6,
         type: 3}
