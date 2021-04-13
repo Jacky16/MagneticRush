@@ -14,8 +14,12 @@ public class Pole : MonoBehaviour
 
     [SerializeField]enum DIRECTION { UP,DOWN,LEFT,RIGHT,ALL_DIRECTIONS};
     [SerializeField] DIRECTION directions;
-
-    [SerializeField] AudioSource soundMagnetic;
+    [Header("Audios Settings")]
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip audioNegative;
+    [SerializeField] AudioClip audioPositive;
+    float timeToStopAudio = 2;
+    float count = 0;
     bool hasPlayed;
 
     Vector2 dir = Vector2.zero;
@@ -51,11 +55,17 @@ public class Pole : MonoBehaviour
             {
                 if (col2d.CompareTag("Player"))
                 {
-                    hasPlayed = false;
+                    count = 0;
                     switch (poleState)
                     {
                         //ROJO
+                         
                         case POLESTATE.POSITIVE:
+                            //Reproducir Audio
+                            if (!audioSource.isPlaying)
+                            {
+                                audioSource.PlayOneShot(audioNegative);
+                            }
                             switch (directions)
                             {
                                 case DIRECTION.UP:
@@ -80,15 +90,24 @@ public class Pole : MonoBehaviour
                             break;
 
                         case POLESTATE.NEGATIVE:
+                            //Reproducir Audio
+                            if (!audioSource.isPlaying)
+                            {
+                                audioSource.PlayOneShot(audioPositive);
+                            }
 
                             dir = (transform.position - playerTransform.position).normalized;
                             break;
                     }
                     rb2dPlayer.AddForceAtPosition(dir * force, playerTransform.position, ForceMode2D.Force);
-                    if (!hasPlayed)
+
+                }
+                else
+                {
+                    count += Time.fixedDeltaTime;
+                    if(count >= timeToStopAudio)
                     {
-                        soundMagnetic.Play();
-                        hasPlayed = true;
+                        audioSource.Stop();
                     }
                 }
             }
