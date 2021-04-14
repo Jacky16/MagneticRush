@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Waypoint
   - Final
+  - Active
   layers:
   - Default
   - TransparentFX

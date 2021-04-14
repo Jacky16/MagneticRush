@@ -7,6 +7,7 @@ public class EnemyPole : MonoBehaviour
     [SerializeField] float radius;
     [SerializeField] float force;
     [SerializeField] float speed;
+    bool canMove;
     [SerializeField] GameObject prefabParticleDestroy;
     Rigidbody2D rb2dPlayer;
     Rigidbody2D rb2d;
@@ -23,7 +24,7 @@ public class EnemyPole : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(!playerInRadius)
+        if(!playerInRadius && canMove)
         rb2d.AddForce(Vector2.left * speed);
         if (playerInRadius)
         {
@@ -48,6 +49,14 @@ public class EnemyPole : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Active"))
+        {
+            canMove = true;
+        }
+    }
+   
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;

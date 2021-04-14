@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 8.5, y: 2.49}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -940,8 +940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc187deb5d97484c9f05c57f451e37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxSize: {x: 2.06, y: 7.72}
-  force: 10
+  boxSize: {x: 2.94, y: 8.47}
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -1222,6 +1222,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1973881220}
+  - {fileID: 525666125}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1272,7 +1273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -1468,12 +1469,12 @@ PrefabInstance:
     - target: {fileID: 7663717602697744001, guid: af35d2d890a13ff4a9e8336ebefdc7dc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.598482
+      value: 27.1
       objectReference: {fileID: 0}
     - target: {fileID: 7663717602697744001, guid: af35d2d890a13ff4a9e8336ebefdc7dc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.066613
+      value: -7.71
       objectReference: {fileID: 0}
     - target: {fileID: 7663717602697744001, guid: af35d2d890a13ff4a9e8336ebefdc7dc,
         type: 3}
@@ -1518,7 +1519,7 @@ PrefabInstance:
     - target: {fileID: 7663717602697744002, guid: af35d2d890a13ff4a9e8336ebefdc7dc,
         type: 3}
       propertyPath: speed
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7663717602697744005, guid: af35d2d890a13ff4a9e8336ebefdc7dc,
         type: 3}
@@ -2091,7 +2092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -2319,7 +2320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 2.29, y: 4.56}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -2547,7 +2548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.97, y: 10.96}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -2775,7 +2776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -3219,7 +3220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -3480,6 +3481,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1348358283}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &525666124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 525666125}
+  - component: {fileID: 525666126}
+  m_Layer: 0
+  m_Name: Square
+  m_TagString: Active
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &525666125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525666124}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 28.88628, y: 13.83774, z: 13.83774}
+  m_Children: []
+  m_Father: {fileID: 169738908}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &525666126
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525666124}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &537066308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3743,7 +3801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 4.86, y: 1.95}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -3971,7 +4029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -4333,7 +4391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -4561,7 +4619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -4789,7 +4847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 2.33, y: 5.8}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -5017,7 +5075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -5498,7 +5556,7 @@ PrefabInstance:
     - target: {fileID: 7663717602697744001, guid: af35d2d890a13ff4a9e8336ebefdc7dc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.177406
+      value: 49.108925
       objectReference: {fileID: 0}
     - target: {fileID: 7663717602697744001, guid: af35d2d890a13ff4a9e8336ebefdc7dc,
         type: 3}
@@ -5548,7 +5606,7 @@ PrefabInstance:
     - target: {fileID: 7663717602697744002, guid: af35d2d890a13ff4a9e8336ebefdc7dc,
         type: 3}
       propertyPath: speed
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7663717602697744005, guid: af35d2d890a13ff4a9e8336ebefdc7dc,
         type: 3}
@@ -5604,7 +5662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -6153,8 +6211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc187deb5d97484c9f05c57f451e37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxSize: {x: 2.51, y: 7.84}
-  force: 10
+  boxSize: {x: 2.94, y: 8.47}
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -6546,7 +6604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -6779,8 +6837,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc187deb5d97484c9f05c57f451e37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxSize: {x: 2.01, y: 11.06}
-  force: 10
+  boxSize: {x: 2.66, y: 11.06}
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -7142,7 +7200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -7376,7 +7434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 9.7, y: 2.18}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -7604,7 +7662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -7832,7 +7890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 2.51, y: 5.51}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -8060,7 +8118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -8476,7 +8534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 2.33, y: 5.8}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -8778,7 +8836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -9202,7 +9260,7 @@ PrefabInstance:
     - target: {fileID: 7663717602697744001, guid: af35d2d890a13ff4a9e8336ebefdc7dc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.128483
+      value: 49.06
       objectReference: {fileID: 0}
     - target: {fileID: 7663717602697744001, guid: af35d2d890a13ff4a9e8336ebefdc7dc,
         type: 3}
@@ -9252,7 +9310,7 @@ PrefabInstance:
     - target: {fileID: 7663717602697744002, guid: af35d2d890a13ff4a9e8336ebefdc7dc,
         type: 3}
       propertyPath: speed
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7663717602697744005, guid: af35d2d890a13ff4a9e8336ebefdc7dc,
         type: 3}
@@ -9422,7 +9480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -9650,7 +9708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 2.51, y: 5.51}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -9878,7 +9936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -10106,7 +10164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -10334,7 +10392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 2.29, y: 4.56}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -11088,8 +11146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc187deb5d97484c9f05c57f451e37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxSize: {x: 4.56, y: 1.75}
-  force: 10
+  boxSize: {x: 5.61, y: 1.75}
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -11365,7 +11423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -11649,8 +11707,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc187deb5d97484c9f05c57f451e37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxSize: {x: 1.99, y: 6.49}
-  force: 10
+  boxSize: {x: 2.59, y: 6.49}
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -11878,7 +11936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -12321,8 +12379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc187deb5d97484c9f05c57f451e37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxSize: {x: 2.36, y: 7.86}
-  force: 10
+  boxSize: {x: 2.94, y: 8.47}
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -12908,7 +12966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -13241,7 +13299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSize: {x: 1.62, y: 1.57}
-  force: 10
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}
@@ -13474,8 +13532,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc187deb5d97484c9f05c57f451e37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxSize: {x: 1.91, y: 7.22}
-  force: 10
+  boxSize: {x: 2.92, y: 7.22}
+  force: 4
   noneColor: {r: 1, g: 1, b: 1, a: 1}
   positiveColor: {r: 1, g: 0.40784314, b: 0.40784314, a: 1}
   negativeColor: {r: 0.54901963, g: 1, b: 1, a: 1}

@@ -18,6 +18,10 @@ public class InputManager : MonoBehaviour
             singletone = this;
         }
     }
+    private void Update()
+    {
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
     public void OnWheel(InputAction.CallbackContext ctx)
     {
         if (ctx.started)
@@ -67,8 +71,8 @@ public class InputManager : MonoBehaviour
     {
         if (ctx.performed)
         {
-            mousePosition = ctx.ReadValue<Vector2>();
-            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            //mousePosition = ctx.ReadValue<Vector2>();
+            //mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         }
     }
 
