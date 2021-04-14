@@ -6,11 +6,18 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     [SerializeField] Animator anim;
-    public void LoadScene(string sceneName)
+    string nameScene;
+    public void FadeOut(string _sceneName)
     {
         anim.SetTrigger("FadeOut");
-        SceneManager.LoadScene(sceneName);
+        nameScene = _sceneName;
+        Invoke("LoadScene", 1);
     }
+    void LoadScene()
+    {
+        SceneManager.LoadScene(nameScene);
+    }
+
     public void Quit()
     {
         Application.Quit();
