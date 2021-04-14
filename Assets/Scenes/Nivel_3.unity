@@ -121,6 +121,61 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &2308331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3465665681082058271, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+    type: 3}
+  m_PrefabInstance: {fileID: 809029292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2308333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2308331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e35fac06aebd984c851d93db3321ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.25
+  leftPos: -24
+  rightPos: 129
+--- !u!114 &2308334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2308331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40dbfb6cd467047429fec978f9d1108a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Nivel_4
+--- !u!50 &2308335
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2308331}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1 &7425410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,6 +1446,7 @@ Transform:
   - {fileID: 125871457}
   - {fileID: 1765201050}
   - {fileID: 1428999697}
+  - {fileID: 697239952}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1641,7 +1697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &299764088
 Rigidbody2D:
   serializedVersion: 4
@@ -2052,7 +2108,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436794547}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2606d5197211309488feb708b651637d, type: 2}
   m_CullingMode: 0
@@ -2361,6 +2417,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1086858919}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &439808788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439808787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40dbfb6cd467047429fec978f9d1108a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Nivel_4
 --- !u!114 &439808789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2375,7 +2444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.25
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &439808790
 Rigidbody2D:
   serializedVersion: 4
@@ -2417,7 +2486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.25
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &454270646
 Rigidbody2D:
   serializedVersion: 4
@@ -2459,7 +2528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.25
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &480654303
 Rigidbody2D:
   serializedVersion: 4
@@ -2507,7 +2576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &534093935
 Rigidbody2D:
   serializedVersion: 4
@@ -2549,7 +2618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.75
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &580421153
 Rigidbody2D:
   serializedVersion: 4
@@ -2591,7 +2660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.25
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &582663068
 Rigidbody2D:
   serializedVersion: 4
@@ -2633,7 +2702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.75
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &587153140
 Rigidbody2D:
   serializedVersion: 4
@@ -2749,7 +2818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.75
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &660204361
 Rigidbody2D:
   serializedVersion: 4
@@ -2796,7 +2865,7 @@ PrefabInstance:
     - target: {fileID: 8907350952723576297, guid: 145406f1cec32e240a6dfa5d6d127bc6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.1
+      value: -5.2
       objectReference: {fileID: 0}
     - target: {fileID: 8907350952723576297, guid: 145406f1cec32e240a6dfa5d6d127bc6,
         type: 3}
@@ -3092,7 +3161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &680866248
 Rigidbody2D:
   serializedVersion: 4
@@ -3199,6 +3268,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &697239952 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1079355245666518156, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+    type: 3}
+  m_PrefabInstance: {fileID: 809029292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &698228023
 GameObject:
   m_ObjectHideFlags: 0
@@ -3439,7 +3514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40dbfb6cd467047429fec978f9d1108a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Nivel_3
+  sceneName: Nivel_4
 --- !u!1 &802612238 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7482398686364427956, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
@@ -3460,7 +3535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &802612241
 Rigidbody2D:
   serializedVersion: 4
@@ -3482,6 +3557,75 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!1001 &809029292
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 253921917}
+    m_Modifications:
+    - target: {fileID: 388477339256668972, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+        type: 3}
+      propertyPath: m_Name
+      value: Parallax 1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079355245666518156, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079355245666518156, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 129.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079355245666518156, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5066495
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079355245666518156, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.080078
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079355245666518156, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079355245666518156, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079355245666518156, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079355245666518156, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079355245666518156, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079355245666518156, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079355245666518156, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b, type: 3}
 --- !u!1 &825923851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3729,7 +3873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.25
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &882780741
 Rigidbody2D:
   serializedVersion: 4
@@ -3828,7 +3972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.75
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &955713335
 Rigidbody2D:
   serializedVersion: 4
@@ -3870,7 +4014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.75
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &982076076
 Rigidbody2D:
   serializedVersion: 4
@@ -4393,7 +4537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.25
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &1015687581
 Rigidbody2D:
   serializedVersion: 4
@@ -6014,7 +6158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &1272027499
 Rigidbody2D:
   serializedVersion: 4
@@ -6723,6 +6867,48 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1358706081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7482398686364427956, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+    type: 3}
+  m_PrefabInstance: {fileID: 809029292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1358706083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358706081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e35fac06aebd984c851d93db3321ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
+  leftPos: -24
+  rightPos: 129
+--- !u!50 &1358706084
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358706081}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!4 &1360368547 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1079355245666518156, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
@@ -8346,7 +8532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &1650272628
 Rigidbody2D:
   serializedVersion: 4
@@ -8495,6 +8681,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1714684608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5746613658320533949, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
+    type: 3}
+  m_PrefabInstance: {fileID: 809029292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1714684610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714684608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e35fac06aebd984c851d93db3321ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.75
+  leftPos: -24
+  rightPos: 129
+--- !u!50 &1714684611
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714684608}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1 &1727268628
 GameObject:
   m_ObjectHideFlags: 0
@@ -9081,7 +9309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.25
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &1788126931
 Rigidbody2D:
   serializedVersion: 4
@@ -9490,7 +9718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &1853434775
 Rigidbody2D:
   serializedVersion: 4
@@ -10368,7 +10596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.75
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &2032461694
 Rigidbody2D:
   serializedVersion: 4
@@ -10410,7 +10638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.75
   leftPos: -24
-  rightPos: 90
+  rightPos: 129
 --- !u!50 &2036291433
 Rigidbody2D:
   serializedVersion: 4

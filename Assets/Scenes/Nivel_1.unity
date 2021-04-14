@@ -3222,7 +3222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40dbfb6cd467047429fec978f9d1108a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Nivel_1
+  sceneName: Nivel_2
 --- !u!4 &1911291378 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2842923029565878792, guid: a1a67a114eef7a64d8208a0d2741ade2,
@@ -3956,6 +3956,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901823823475065071, guid: 195250154d003d342a804f70a4d58d14,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3901823824166916248, guid: 195250154d003d342a804f70a4d58d14,
         type: 3}
