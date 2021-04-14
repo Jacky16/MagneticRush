@@ -6137,9 +6137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShakeDuration: 0.3
-  ShakeAmplitude: 0.5
-  ShakeFrequency: 1
-  VirtualCamera: {fileID: 1586264912}
+  ShakeAmplitude: 1.6
+  ShakeFrequency: 2
 --- !u!95 &1586264911
 Animator:
   serializedVersion: 3

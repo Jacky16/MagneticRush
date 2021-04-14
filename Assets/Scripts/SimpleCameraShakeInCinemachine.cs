@@ -13,7 +13,7 @@ public class SimpleCameraShakeInCinemachine : MonoBehaviour {
     private float ShakeElapsedTime = 0f;
 
     // Cinemachine Shake
-    public CinemachineVirtualCamera VirtualCamera;
+    CinemachineVirtualCamera VirtualCamera;
     private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
     public static SimpleCameraShakeInCinemachine singletone;
 
@@ -23,6 +23,7 @@ public class SimpleCameraShakeInCinemachine : MonoBehaviour {
         {
             singletone = this;
         }
+        VirtualCamera = GetComponent<CinemachineVirtualCamera>();
     }
     // Use this for initialization
     void Start()

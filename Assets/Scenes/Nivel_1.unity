@@ -2289,9 +2289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShakeDuration: 0.3
-  ShakeAmplitude: 1
-  ShakeFrequency: 1.5
-  VirtualCamera: {fileID: 978493316}
+  ShakeAmplitude: 1.6
+  ShakeFrequency: 2
 --- !u!4 &1059059300 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2842923029565878792, guid: a1a67a114eef7a64d8208a0d2741ade2,

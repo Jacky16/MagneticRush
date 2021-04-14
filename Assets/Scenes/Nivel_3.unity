@@ -1124,7 +1124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186942173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.0999994, y: 7.37, z: -10}
+  m_LocalPosition: {x: 3.61, y: 5.33, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1817,6 +1817,7 @@ GameObject:
   - component: {fileID: 336325364}
   - component: {fileID: 336325366}
   - component: {fileID: 336325365}
+  - component: {fileID: 336325367}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -1893,6 +1894,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &336325367
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336325363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &343567632
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,7 +2054,7 @@ Animator:
   m_GameObject: {fileID: 436794547}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3cb1f0fe6b5b631488995a7f63131a02, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2606d5197211309488feb708b651637d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2058,9 +2076,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShakeDuration: 0.3
-  ShakeAmplitude: 0.5
-  ShakeFrequency: 1
-  VirtualCamera: {fileID: 436794550}
+  ShakeAmplitude: 1.6
+  ShakeFrequency: 2
 --- !u!114 &436794550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2080,7 +2097,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 2022731035}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 7
@@ -2104,12 +2121,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436794547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.0999994, y: 7.37, z: -10}
+  m_LocalPosition: {x: 3.61, y: 5.33, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 336325364}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &438672740
 GameObject:
@@ -2774,7 +2791,7 @@ PrefabInstance:
     - target: {fileID: 8907350952723576297, guid: 145406f1cec32e240a6dfa5d6d127bc6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8907350952723576297, guid: 145406f1cec32e240a6dfa5d6d127bc6,
         type: 3}
@@ -3963,7 +3980,7 @@ PrefabInstance:
     - target: {fileID: 519053261559278496, guid: 195250154d003d342a804f70a4d58d14,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 519053261559278496, guid: 195250154d003d342a804f70a4d58d14,
         type: 3}
@@ -9106,7 +9123,7 @@ PrefabInstance:
     - target: {fileID: 1286768451956396218, guid: 4fe46d5e711c1b34f9ef33685146f5c2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1286768451956396218, guid: 4fe46d5e711c1b34f9ef33685146f5c2,
         type: 3}
@@ -10331,12 +10348,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &2022731035 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8907350952723576297, guid: 145406f1cec32e240a6dfa5d6d127bc6,
-    type: 3}
-  m_PrefabInstance: {fileID: 668765907}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2032461691 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5746613658320533949, guid: ed1c1c2379fe14c44ba3e3f6c73c7a3b,
