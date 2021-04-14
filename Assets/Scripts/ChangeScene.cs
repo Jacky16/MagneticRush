@@ -11,10 +11,11 @@ public class ChangeScene : MonoBehaviour
     {
         anim.SetTrigger("FadeOut");
         nameScene = _sceneName;
-        Invoke("LoadScene", 1);
+        StartCoroutine(LoadScene());
     }
-    void LoadScene()
+    IEnumerator LoadScene()
     {
+        yield return new WaitForSecondsRealtime(1);
         SceneManager.LoadScene(nameScene);
     }
 

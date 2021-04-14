@@ -6,23 +6,19 @@ using UnityEngine.SceneManagement;
 public class GoalController : MonoBehaviour
 {
     [SerializeField] string sceneName;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Animator animFade;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+   
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.tag == "Player")
         {
-            SceneManager.LoadScene(sceneName);
+            Invoke("LoadScene", 1);
+            animFade.SetTrigger("FadeOut");
         }
+    }
+    void LoadScene()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

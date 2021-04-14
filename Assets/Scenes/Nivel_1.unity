@@ -459,18 +459,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecea15c46bb2e18438ccf2b10ed314a1, type: 3}
---- !u!114 &69676596 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3901823824166916247, guid: 195250154d003d342a804f70a4d58d14,
-    type: 3}
-  m_PrefabInstance: {fileID: 3901823824506451263}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68161f0beb3d4f14ab700d5b307d85b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &114660811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,6 +1650,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2842923029565878796, guid: a1a67a114eef7a64d8208a0d2741ade2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2842923029565878797, guid: a1a67a114eef7a64d8208a0d2741ade2,
         type: 3}
       propertyPath: force
@@ -2482,7 +2475,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978493315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3, y: 6.02, z: -10}
+  m_LocalPosition: {x: 3.4, y: 6.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 612616701}
@@ -3406,6 +3399,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2842923029565878796, guid: a1a67a114eef7a64d8208a0d2741ade2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Final
+      objectReference: {fileID: 0}
     - target: {fileID: 2842923029565878797, guid: a1a67a114eef7a64d8208a0d2741ade2,
         type: 3}
       propertyPath: force
@@ -3481,7 +3479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40dbfb6cd467047429fec978f9d1108a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Nivel_2
+  sceneName: MainMenu
+  animFade: {fileID: 468063551}
 --- !u!4 &1911291378 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2842923029565878792, guid: a1a67a114eef7a64d8208a0d2741ade2,
@@ -4037,7 +4036,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024507791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3, y: 6.02, z: -10}
+  m_LocalPosition: {x: 3.4, y: 6.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4353,51 +4352,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2024507792}
-    - target: {fileID: 3901823824166916248, guid: 195250154d003d342a804f70a4d58d14,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3901823824166916248, guid: 195250154d003d342a804f70a4d58d14,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_ActionId
-      value: 49457b40-431f-4708-aa10-ade837239591
-      objectReference: {fileID: 0}
-    - target: {fileID: 3901823824166916248, guid: 195250154d003d342a804f70a4d58d14,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_ActionName
-      value: Movement/Pause[/Keyboard/escape]
-      objectReference: {fileID: 0}
-    - target: {fileID: 3901823824166916248, guid: 195250154d003d342a804f70a4d58d14,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3901823824166916248, guid: 195250154d003d342a804f70a4d58d14,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3901823824166916248, guid: 195250154d003d342a804f70a4d58d14,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 69676596}
-    - target: {fileID: 3901823824166916248, guid: 195250154d003d342a804f70a4d58d14,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3901823824166916248, guid: 195250154d003d342a804f70a4d58d14,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnPause
-      objectReference: {fileID: 0}
-    - target: {fileID: 3901823824166916248, guid: 195250154d003d342a804f70a4d58d14,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4993127045259604987, guid: 195250154d003d342a804f70a4d58d14,
         type: 3}
       propertyPath: m_Name
@@ -4499,7 +4453,7 @@ PrefabInstance:
     - target: {fileID: 8907350952723576297, guid: 145406f1cec32e240a6dfa5d6d127bc6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.02
+      value: -7.25
       objectReference: {fileID: 0}
     - target: {fileID: 8907350952723576297, guid: 145406f1cec32e240a6dfa5d6d127bc6,
         type: 3}
