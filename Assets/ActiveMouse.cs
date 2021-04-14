@@ -5,7 +5,7 @@ using UnityEngine;
 public class ActiveMouse : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         Cursor.visible = true;
     }
