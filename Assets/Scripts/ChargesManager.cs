@@ -56,25 +56,27 @@ public class ChargesManager : MonoBehaviour
         isDoingForce = InputManager.singletone.GetIsDoingForce();
         playerInRadius = Vector2.Distance(mousePos, rb2dPlayer.position) < mouseRadius;
         mouseTransform.position = mousePos;
-
-        ChangeMouseColor();
-        DoForce();
-        RotationWeapon();
-
-        if (!isDoingForce)
+        if (!PauseManager.singletone.GetPause())
         {
-            PlayParticlesForce();
-            audioForce.Stop();
+            ChangeMouseColor();
+            DoForce();
+            RotationWeapon();
+
+            if (!isDoingForce)
+            {
+                PlayParticlesForce();
+                audioForce.Stop();
+            }
+            else
+            {
+                if(!audioForce.isPlaying)
+                audioForce.Play();
+            }     
         }
-        else
-        {
-            if(!audioForce.isPlaying)
-            audioForce.Play();
-        }     
     }
     public void ChargeSpawn(Vector3 posSpawn)
     {
-        if(numCharges > 0 && numCharges <= maxCharges && !isDoingForce)
+        if(numCharges > 0 && numCharges <= maxCharges && !isDoingForce && !PauseManager.singletone.GetPause())
         {         
             SimpleCameraShakeInCinemachine.singletone.DoCameraShake();
             numCharges--;

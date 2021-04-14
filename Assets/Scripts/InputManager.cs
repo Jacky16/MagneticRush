@@ -71,6 +71,12 @@ public class InputManager : MonoBehaviour
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         }
     }
+
+    public void OnPause(InputAction.CallbackContext ctx)
+    {
+        if(ctx.started)
+        PauseManager.singletone.Pause();
+    }
     public Vector2 GetMousePos()
     {
         return mousePosition;
