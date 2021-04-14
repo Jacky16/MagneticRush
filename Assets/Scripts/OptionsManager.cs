@@ -16,6 +16,8 @@ public class OptionsManager : MonoBehaviour
     {
         LoadValuesAudio();
         LoadSliders();
+        QualitySettings.vSyncCount = 1;
+        Application.targetFrameRate = 60;
     }
     public void SaveValuesAudio()
     {

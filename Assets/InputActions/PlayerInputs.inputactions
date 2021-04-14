@@ -70,17 +70,6 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "PutCharge",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8a809a06-57a4-4ec6-b217-ad3bde88376b",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
                     "action": "DoForce",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -137,6 +126,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8a809a06-57a4-4ec6-b217-ad3bde88376b",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PutCharge",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
