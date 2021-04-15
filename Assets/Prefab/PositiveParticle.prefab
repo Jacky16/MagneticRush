@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3.26
-  force: 5
+  force: 15
   poleState: 0
   VFX_Destroy: {fileID: 8552077936772540874, guid: e5b51de060974bc4ab8cc162fb56dd37,
     type: 3}
